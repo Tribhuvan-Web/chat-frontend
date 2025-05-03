@@ -82,7 +82,7 @@ const ChatPage = () => {
     let sock;
 
     const connectWebSocket = () => {
-      sock = new SockJS(`${import.meta.env.VITE_BACKEND_URL}/chat`);
+      sock = new SockJS(`${import.meta.env.VITE_BACKEND_URL}chat`);
       client = Stomp.over(sock);
 
       client.connect({}, () => {
